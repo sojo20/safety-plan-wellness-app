@@ -1,0 +1,52 @@
+:root {
+  --primary-calm: #6366f1;
+  --primary-light: #818cf8;
+  --primary-lighter: #e0e7ff;
+  --secondary-serene: #06b6d4;
+  --secondary-light: #22d3ee;
+  --accent-warm: #f59e0b;
+  --bg-soft: #f8fafc;
+  --bg-neutral: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-calm: #cbd5e1;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background: linear-gradient(135deg, var(--bg-soft) 0%, #f0f4f8 100%);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Calming transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Remove default focus styles and add calming ones */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-lighter);
+}
