@@ -1,0 +1,265 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px);
+  padding: 20px;
+}
+
+.welcome-card {
+  background: white;
+  border-radius: 20px;
+  padding: 48px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.08);
+  animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcome-icon {
+  color: var(--primary-calm);
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.welcome-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.tagline {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.welcome-content {
+  margin-bottom: 40px;
+}
+
+.welcome-text {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg-soft);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-light);
+}
+
+.feature-icon {
+  color: var(--primary-calm);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feature-item h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.feature-item p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.welcome-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.calm-input {
+  padding: 12px 16px;
+  border: 2px solid var(--border-calm);
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--text-primary);
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.calm-input:focus {
+  outline: none;
+  border-color: var(--primary-calm);
+  box-shadow: 0 0 0 3px var(--primary-lighter);
+}
+
+.calm-input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-calm) 0%, var(--primary-light) 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--bg-neutral);
+  color: var(--text-primary);
+  border: 2px solid var(--border-calm);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-neutral);
+  border-color: var(--primary-calm);
+  color: var(--primary-calm);
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 18px;
+  width: 100%;
+}
+
+.ready-card {
+  padding: 48px;
+}
+
+.ready-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.ready-icon {
+  color: var(--primary-calm);
+  margin-bottom: 16px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.ready-header h2 {
+  font-size: 28px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.ready-header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.ready-content {
+  background: var(--bg-soft);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  border-left: 4px solid var(--secondary-light);
+}
+
+.ready-content p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.ready-content p:last-child {
+  margin-bottom: 0;
+}
+
+.estimate {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 12px !important;
+}
+
+.ready-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .welcome-card {
+    padding: 32px 20px;
+  }
+
+  .welcome-header h1 {
+    font-size: 26px;
+  }
+
+  .features {
+    gap: 12px;
+  }
+
+  .feature-item {
+    padding: 12px;
+  }
+}
